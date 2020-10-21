@@ -1,10 +1,6 @@
 FROM ruby:2.7.1-slim-buster
 
-RUN apt-get update -qq && apt-get install -y build-essential git vim curl apt-utils
-
-# Install nodejs
-RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
-RUN apt-get update &&  apt-get install -y nodejs
+RUN apt-get update -qq && apt-get install -y build-essential curl nodejs
 
 # yarn
 RUN curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add

@@ -3,7 +3,6 @@
 ### Description
 
 App for the test challenge https://gist.github.com/lawitschka/063f2e28bd6993cac5f8b40b991ae899.
-The app  
 
 ### Stack
 
@@ -58,7 +57,7 @@ and is persisted to local db.
     ```
     docker-compose up
     ```
-4. Open `http://localhost:3000` in browser
+4. Wait until puma starts and open `http://localhost:3000` in browser
    
 #### Thank you!
 Any feedback would be greatly appreciated :)

@@ -6,4 +6,4 @@ bundle install
 yarn install
 bundle exec rails webpacker:compile
 bundle exec rails db:setup
-bundle exec puma -C config/puma.rb
+bundle exec rails s
