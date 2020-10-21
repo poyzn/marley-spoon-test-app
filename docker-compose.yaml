@@ -3,15 +3,20 @@ services:
   app:
     build: .
     container_name: app
-    command: 'bundle exec puma -C config/puma.rb'
+    entrypoint: /app/bin/entrypoint.sh
     restart: always
     ports:
-      - "80:3000"
+      - "3000:3000"
     environment:
       - "POSTGRES_USER=postgres"
       - "POSTGRES_PASSWORD=password"
       - "POSTGRES_HOST=db"
       - "RAILS_ENV=production"
+      - "NODE_ENV=production"
+      - "POSTGRES_DB=test_cooking_production"
+      - "MEMCACHED_URL=memcached:11211"
+      - "BUNDLE_PATH=/usr/local/bundle"
+      - "RAILS_SERVE_STATIC_FILES=true"
       - RAILS_MASTER_KEY
     depends_on:
       - db
@@ -22,8 +27,6 @@ services:
     image: "postgres:12"
     container_name: db
     restart: always
-    volumes:
-      - pgdata:/var/lib/postgresql/data
     environment:
       - "POSTGRES_PASSWORD=password"
 
@@ -32,4 +35,3 @@ services:
 
 volumes:
   bundle:
-  pgdata:

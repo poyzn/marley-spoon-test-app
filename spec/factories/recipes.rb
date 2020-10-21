@@ -2,7 +2,12 @@
 
 FactoryBot.define do
   factory :recipe do
-    content { {} }
+    contentful_id { SecureRandom.hex }
+    title { Faker::Food.dish }
+    description { Faker::Food.description }
+    image { Faker::Internet.url }
+    chef_name { Faker::Name.name }
+    tags { [] }
   end
 end
 

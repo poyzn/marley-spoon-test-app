@@ -30,6 +30,6 @@ module TestCooking
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
-    config.cache_store = :dalli_store, 'localhost:11211'
+    config.cache_store = :dalli_store, ENV.fetch('MEMCACHED_URL', 'localhost:11211')
   end
 end

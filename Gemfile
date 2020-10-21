@@ -5,15 +5,14 @@ source 'https://rubygems.org'
 gem 'annotate'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'contentful'
+gem 'dalli'
 gem 'httparty'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 4.1'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
-gem 'redis-rails'
 gem 'sass-rails', '>= 6'
 gem 'slim'
 gem 'webpacker', '~> 4.0'
-gem 'dalli'
 
 group :development, :test do
   gem 'byebug'

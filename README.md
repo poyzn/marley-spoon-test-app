@@ -9,9 +9,9 @@ The app
 
 * Ruby version 2.7.1
 * Ruby on Rails 6.0
-* Postgresql
-* Memcached 
-* Dockerized app
+* Postgresql 12
+* Memcached 1.6.6
+* Dockerized app based on ruby-2.7.1-slim-buster (Debian) image 
 
 ### Functionality
 
@@ -44,21 +44,21 @@ and is persisted to local db.
 * Modular architecture with SOLID and DRY principles
 * Slim comtrollers and models. Main login and functionality in service objects
 * Recipes querie object uses data sources injection 
-* ReactJS on hooks and React Router  
-* Test coverage
+* ReactJS on hooks and React Router
 
-### How to run the app
+### How to run the app on local system
 
 0. Make sure a docker is installed on the system
 1. Clone a repo
 2. Export master key env variable
     ```
-    export RAILS_MASTER_KEY=master.key
+    export RAILS_MASTER_KEY=e1693fd9b5020efc9c8d74c0189b8405
     ``` 
 3. Start dockerized app
     ```
     docker-compose up
     ```
+4. Open `http://localhost:3000` in browser
    
 #### Thank you!
 Any feedback would be greatly appreciated :)
