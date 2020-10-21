@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e9e63ce0-7956-4f40-98b5-04ab906ea225" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/entrypoint.sh" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entrypoint.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +152,7 @@
       <option name="presentableId" value="Default" />
       <updated>1603040771415</updated>
       <workItem from="1603040772588" duration="9471000" />
-      <workItem from="1603215359616" duration="31282000" />
+      <workItem from="1603215359616" duration="31876000" />
     </task>
     <servers />
   </component>

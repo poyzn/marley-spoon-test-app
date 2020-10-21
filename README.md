@@ -18,7 +18,7 @@ The app consists of two parts - frontend and backend.
 
 #### Frontend
 
-Frontend is build with ReactJS hooks and React Router.
+Frontend is built with ReactJS hooks and React Router.
 App has two paths:
 
 * `/` - shows list of recipes
@@ -29,26 +29,26 @@ It doesn't matter which page is opened first.
 
 #### Backend
 
-Backend after receiving a request from the frontend do:
+Backend after receiving a request from the frontend does:
 
-* if a list of recipes is requested it checks if the list is in cache.
-If there's no list in the cache then list is fetched from a data source (contentful).
-Then list is stored in cache for 1 minute since contentful has a limit of 55 requests per min.
+* if a list of recipes is requested it checks if the list is in the cache.
+If there's no list in the cache then the list is fetched from a data source (contentful).
+Then the list is stored in the cache for 1 minute since contentful has a limit of 55 rpm.
 * if a single recipe is requested it tries to find the recipe in the local db.
 If there's no recipe in the local db then the recipe is fetched from remote data source
-and is persisted to local db.  
+and is persisted to local db.
 
 ### Features
 
 * Modular architecture with SOLID and DRY principles
-* Slim comtrollers and models. Main login and functionality in service objects
-* Recipes querie object uses data sources injection 
-* ReactJS on hooks and React Router
+* Slim comtrollers and models. Main logic and functionality are in service objects
+* Query objects use data sources injection 
+* Frontend app is built with ReactJS hooks and React Router
 
 ### How to run the app on local system
 
 0. Make sure a docker is installed on the system
-1. Clone a repo
+1. Clone the repo
 2. Export master key env variable
     ```
     export RAILS_MASTER_KEY=e1693fd9b5020efc9c8d74c0189b8405
@@ -57,7 +57,7 @@ and is persisted to local db.
     ```
     docker-compose up
     ```
-4. Wait until puma starts and open `http://localhost:3000` in browser
+4. Wait until rails server starts and open `http://localhost:3000` in browser
    
 #### Thank you!
 Any feedback would be greatly appreciated :)
