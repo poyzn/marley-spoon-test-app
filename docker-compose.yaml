@@ -1,0 +1,35 @@
+version: "3.0"
+services:
+  app:
+    build: .
+    container_name: app
+    command: 'bundle exec puma -C config/puma.rb'
+    restart: always
+    ports:
+      - "80:3000"
+    environment:
+      - "POSTGRES_USER=postgres"
+      - "POSTGRES_PASSWORD=password"
+      - "POSTGRES_HOST=db"
+      - "RAILS_ENV=production"
+      - RAILS_MASTER_KEY
+    depends_on:
+      - db
+      - memcached
+    volumes:
+      - bundle:/usr/local/bundle
+  db:
+    image: "postgres:12"
+    container_name: db
+    restart: always
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      - "POSTGRES_PASSWORD=password"
+
+  memcached:
+    image: "memcached:1.6.6"
+
+volumes:
+  bundle:
+  pgdata:
