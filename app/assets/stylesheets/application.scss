@@ -1,0 +1,14 @@
+.recipes-list-item {
+  display: inline-block;
+  width: 25%;
+  vertical-align: top;
+  .image {
+    height: 300px;
+    background-size: cover;
+  }
+  h2 {
+    color: black;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+}

@@ -1,0 +1,4 @@
+Layout/HashAlignment:
+  Enabled: false
+Style/LambdaCall:
+  Enabled: false
